@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './@auth/auth.module';
 import { BuyProductComponent } from './user/buy-product.component';
+import { CoreModule } from './@core/core.module';
 
 @NgModule({
     declarations: [AppComponent, BuyProductComponent],
@@ -16,7 +17,8 @@ import { BuyProductComponent } from './user/buy-product.component';
         BrowserAnimationsModule,
         AppRoutingModule,
         MaterialModule,
-        AuthModule
+        AuthModule,
+        CoreModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]

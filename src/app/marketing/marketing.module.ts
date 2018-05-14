@@ -8,18 +8,31 @@ import { MarketingComponent } from './marketing.component';
 import { MarketingRoutingModule } from './marketing.routing.module';
 import { ViewProductComponent } from './view-products/view-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
+import { GenerateReferalComponent } from './generate-Referal/generate-Referal.component';
+import { ReferFriendComponent } from './refer-friend/refer-friend.component';
+import { ShareButtonsModule } from 'ngx-sharebuttons';
 @NgModule({
     declarations: [
         ViewProfileComponent,
         MarketingComponent,
         SliderComponent,
         ViewProductComponent,
-        ViewProductDetailComponent
+        ViewProductDetailComponent,
+        GenerateReferalComponent,
+        ReferFriendComponent
     ],
-    imports: [MaterialModule, CommonModule, MarketingRoutingModule, SharedModule],
+    imports: [
+        ShareButtonsModule.forRoot(),
+        MaterialModule,
+        CommonModule,
+        MarketingRoutingModule,
+        SharedModule,
+        NgbModule.forRoot()
+    ],
     exports: [],
     providers: [],
-    entryComponents: [ViewProductDetailComponent]
+    entryComponents: [ViewProductDetailComponent, GenerateReferalComponent, ReferFriendComponent]
 })
 export class MarketingModule {}

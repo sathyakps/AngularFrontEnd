@@ -4,6 +4,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SHARED_COMPONENTS } from './components/components';
+import { ViewProfileComponent } from '../view-profile/view-profile.component';
 
 /**
  * Shared module that you can import everywhere, because it haven't providers.
@@ -13,7 +14,7 @@ import { SHARED_COMPONENTS } from './components/components';
     imports: [CommonModule, ReactiveFormsModule, FormsModule],
     exports: [PIPES, SHARED_COMPONENTS],
     declarations: [PIPES, SHARED_COMPONENTS],
-    entryComponents: [],
+    entryComponents: [ViewProfileComponent],
     providers: []
 })
 export class SharedModule {}

@@ -1,0 +1,26 @@
+<div mat-dialog-content>
+
+    <div class="swal-icon swal-icon--success">
+        <span class="swal-icon--success__line swal-icon--success__line--long"></span>
+        <span class="swal-icon--success__line swal-icon--success__line--tip"></span>
+
+        <div class="swal-icon--success__ring"></div>
+        <div class="swal-icon--success__hide-corners"></div>
+    </div>
+    <div class="swal-title">
+        Refer Friend
+    </div>
+    <div class="swal-text">
+        <span>{{ 'http://localhost:3000/register/' + data['referralCode']}}</span>
+        <share-buttons [theme]="'circles-dark'" [include]="[ 'twitter','google','linkedin','whatsapp','email', 'facebook']" [show]="6"
+            [url]="'http://localhost:3000/register/'+ data['referralCode']"></share-buttons>
+    </div>
+    <div class="swal-footer">
+        <div class="swal-button-container text-center">
+
+            <button [mat-dialog-close]="true" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 mat-button">OK</button>
+
+        </div>
+
+    </div>
+</div>

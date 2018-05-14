@@ -1,0 +1,9 @@
+div > div > div > div.col-md-6.col-lg-7.p-b-30,
+div > div > div > div.col-md-6.col-lg-5.p-b-30 {
+    padding-bottom: 0px;
+}
+
+div > div > div > div.col-md-6.col-lg-7.p-b-30 > div > div > div.slick3.gallery-lb > div {
+    margin-top: 40px;
+    margin-left: -40px;
+}

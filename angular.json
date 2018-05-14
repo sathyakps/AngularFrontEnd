@@ -38,7 +38,6 @@
                             "src/assets/vendor/jqueryui/jquery-ui.css",
                             "src/assets/vendor/jqueryui/jquery-ui.structure.css",
                             "src/assets/vendor/jqueryui/jquery-ui.theme.css",
-                            "src/assets/vendor/lightbox2/css/lightbox.css",
                             "src/assets/vendor/MagnificPopup/magnific-popup.css",
                             "src/assets/vendor/perfect-scrollbar/perfect-scrollbar.css",
                             "src/assets/vendor/slick/slick.css",
@@ -65,8 +64,6 @@
                             "src/assets/vendor/perfect-scrollbar/perfect-scrollbar.min.js",
                             "src/assets/vendor/jqueryui/external/jquery/jquery.js",
                             "src/assets/vendor/jqueryui/jquery-ui.js",
-                            "src/assets/vendor/lightbox2/js/lightbox-plus-jquery.js",
-                            "src/assets/vendor/lightbox2/js/lightbox.js",
                             "src/assets/vendor/select2/select2.js"
                         ]
                     },

@@ -1,0 +1,97 @@
+<div mat-dialog-content>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6 col-lg-7 p-b-30">
+                <div class="p-l-25 p-r-30 p-lr-0-lg">
+                    <div class="wrap-slick3 flex-sb flex-w">
+                        <div class="wrap-slick3-dots"></div>
+                        <div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
+
+                        <div class="slick3 gallery-lb">
+                            <div class="item-slick3" data-thumb="assets/images/product-detail-01.jpg">
+                                <div class="wrap-pic-w pos-relative">
+                                    <img src="../../../assets/images/icons/person.png" alt="IMG-ICON">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-5 p-b-30">
+                <div class="p-r-50 p-t-5 p-lr-0-lg">
+                    <h4 class="mtext-105 cl2 js-name-detail p-b-14">
+                        <b style="font-size: 1.5em">My Profile</b>
+                    </h4>
+                    <ul class="sidebar-link w-full">
+                        <li class="p-b-13">
+                            <span style="font-weight: bold;color: #4272d7">
+                                Name :
+                            </span>
+                            <span>
+                                {{userData['name']}}
+                            </span>
+                        </li>
+                        <li class="p-b-13">
+                            <span style="font-weight: bold;color: #4272d7">
+                                Email :
+                            </span>
+                            <span>
+                                {{userData['email']}}
+                            </span>
+                        </li>
+                        <li class="p-b-13">
+                            <span style="font-weight: bold;color: #4272d7">
+                                Mobile Number :
+                            </span>
+                            <span>
+                                {{userData['mobile']}}
+                            </span>
+                        </li>
+                        <li class="p-b-13">
+                            <span style="font-weight: bold;color: #4272d7">
+                                Reward Points :
+                            </span>
+                            <span>
+                                {{userData['rewardPoints']}}
+                            </span>
+                        </li>
+                        <li class="p-b-13">
+                            <span style="font-weight: bold;color: #4272d7">
+                                Direct Referrals Count :
+                            </span>
+                            <span>
+                                {{directReferrals}}
+                            </span>
+                        </li>
+                        <li class="p-b-13">
+                            <span style="font-weight: bold;color: #4272d7">
+                                First Level Friends
+                            </span>
+                            <span>
+                                {{indirectReferals1}}
+                            </span>
+                        </li>
+                        <li class="p-b-13">
+                            <span style="font-weight: bold;color: #4272d7">
+                                Second Level Friends
+                            </span>
+                            <span>
+                                {{indirectReferals2}}
+                            </span>
+                        </li>
+                        <br>
+                        <li class="p-b-6">
+                            <button class="flex-c-m stext-101 cl0 size-125 bg3 bor2 hov-btn3 p-lr-15 trans-04" (click)="referUser()">
+                                Refer Friends
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
