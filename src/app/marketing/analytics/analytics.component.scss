@@ -1,0 +1,10 @@
+.heading {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Exo;
+    color: #5d1ef1;
+}
+
+:host() /deep/ div>div>ng-org-chart>div>div>ng-org-chart>oc-employee>div.oc-box.oc-border.oc-background {
+    background-color: red;
+}

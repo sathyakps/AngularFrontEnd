@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="row">
+    <div style="margin-top:25px;margin-left:50px ;height:400px" class="col-md-5">
+        <div *ngIf="!pieChartReady">
+            Loading
+        </div>
+        <google-chart (chartReady)="makeChartPieVisible()" [data]="pieChartData "></google-chart>
+    </div>
+
+    <div style="margin-top:25px;margin-left:50px ;height:400px" class="com-md-offset-1 col-md-5">
+        <div *ngIf="!barChartReady">
+            Loading
+        </div>
+        <google-chart (chartReady)="makeChartBarVisible()" [data]="columnChartData "></google-chart>
+    </div>
+</div>
+
+<div class="row">
+    <div style="margin-top:25px;margin-left:50px ;" class="col-md-12">
+        <div *ngIf="!friendsChart">
+            Loading
+        </div>
+
+        <ng-org-chart *ngIf="friendsChart" class="col-md-10" [topEmployee]="friendsChart"></ng-org-chart>
+    </div>
+
+</div>
+
+
+<app-footer></app-footer>

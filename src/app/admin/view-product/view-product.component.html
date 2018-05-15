@@ -1,0 +1,13 @@
+<section class="bg0 p-t-23 p-b-140" style="background-color:#7f8ba5">
+    <div class="container" >
+        <div class="p-b-10">
+            <h3 class="ltext-102 cl5">
+                View Product
+            </h3>
+        </div>
+        <div class="flex-w flex-sb-m p-b-52">
+            <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+            </ng2-smart-table>
+        </div>
+    </div>
+</section>

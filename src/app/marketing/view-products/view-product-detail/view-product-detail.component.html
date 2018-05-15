@@ -14,52 +14,111 @@
                         <div class="slick3 gallery-lb">
                             <div class="item-slick3" data-thumb="assets/images/product-detail-01.jpg">
                                 <div class="wrap-pic-w pos-relative">
-                                    <img src="../assets/images/product-detail-01.jpg" alt="IMG-PRODUCT">
+                                    <img [src]="data['imageURL']" alt="IMG-PRODUCT">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="p-t-33">
+
+
+                    <div class="flex-w flex-r-m p-b-10">
+                        <div class="size-204 flex-w flex-m respon6-next">
+
+                            <form [formGroup]="discountForm">
+                                <mat-form-field style="margin-top: 20px">
+                                    <input formControlName="discount" type='number' min="0" [max]="data['maximumDiscount']" matInput placeholder="Coupon Discount">
+                                    <mat-hint>{{'Maximum Discount : ' +data['maximumDiscount']}}</mat-hint>
+                                    <mat-error *ngIf="discountForm.get('discount').hasError('max')">Discount Cannot be Greater than Maximum Discount</mat-error>
+                                </mat-form-field>
+                            </form>
+                            <button style="margin-top: 20px" (click)="generateReferral()" [disabled]="discountForm.invalid" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+                                Generate code
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="col-md-6 col-lg-5 p-b-30">
                 <div class="p-r-50 p-t-5 p-lr-0-lg">
                     <h4 class="mtext-105 cl2 js-name-detail p-b-14">
-                        Lightweight Jacket
+                        {{data['name']}}
+                        <br>
                     </h4>
 
                     <span class="mtext-106 cl2">
-                        $58.79
+                        Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Rs.{{data['price']}}
+                        <br>
+                    </span>
+
+
+
+                    <span *ngIf="data['categoryName'] === 'TV'">
+                        <span *ngIf="data['screenSize']" class="mtext-106 cl2">
+                            ScreenSize : {{data['screenSize']}}
+                            <br>
+                        </span>
+                        <span *ngIf="data['screenType']" class="mtext-106 cl2">
+                            Screen Type : {{data['screenType']}}
+                            <br>
+                        </span>
+                        <span *ngIf="data['smartTv']" class="mtext-106 cl2">
+                            Smart Tv : {{data['smartTv']}}
+                            <br>
+                        </span>
+                        <span *ngIf="data['speakerOutput']" class="mtext-106 cl2">
+                            Speaker output : {{data['speakerOutput']}}
+                            <br>
+                        </span>
+                    </span>
+
+                    <span *ngIf="data['categoryName'] === 'LAPTOP'">
+                        <span *ngIf="data['processor']" class="mtext-106 cl2">
+                            Processor : {{data['processor']}}
+                            <br>
+                        </span>
+                        <span *ngIf="data['RAM']" class="mtext-106 cl2">
+                            RAM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{data['RAM']}}
+                            <br>
+                        </span>
+                        <span *ngIf="data['OS']" class="mtext-106 cl2">
+                            OS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{data['OS']}}
+                            <br>
+                        </span>
+                        <span *ngIf="data['storage']" class="mtext-106 cl2">
+                            Storage &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{data['storage']}}
+                            <br>
+                        </span>
+                    </span>
+
+                    <span *ngIf="data['categoryName'] === 'MOBILE'">
+                        <span *ngIf="data['screenSize']" class="mtext-106 cl2">
+                            ScreenSize : {{data['screenSize']}}
+                            <br>
+                        </span>
+                        <span *ngIf="data['RAM']" class="mtext-106 cl2">
+                            RAM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{data['RAM']}}
+                            <br>
+                        </span>
+                        <span *ngIf="data['battery']" class="mtext-106 cl2">
+                            Battery &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{data['battery']}}
+                            <br>
+                        </span>
+                        <span *ngIf="data['noOfSIM']" class="mtext-106 cl2">
+                            No of SIM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{data['noOfSIM']}}
+                            <br>
+                        </span>
                     </span>
 
                     <p class="stext-102 cl3 p-t-23">
-                        Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.
+                        {{data['description']}}
                     </p>
-
-                    <!--  -->
-                    <div class="p-t-33">
-
-
-                        <div class="flex-w flex-r-m p-b-10">
-                            <div class="size-204 flex-w flex-m respon6-next">
-
-
-                                <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" (click)="generateReferral()">
-                                    Generate code
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--  -->
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-
-<div mat-dialog-actions>
-    <button mat-button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="margin-left: 55rem;"
-        (click)="onClose()">OK</button>
 </div>

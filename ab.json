@@ -1,0 +1,17 @@
+{
+    "categoryName": "LAPTOP",
+    "name": "Acer Predator Helios",
+    "price": 61990,
+    "brand": "Acer",
+    "description":
+        "Great price for a GTX 1060 GPU,Strong performance,Relatively long battery life,two-year warranty,Easy to upgrade.",
+    "imageURL":
+        "https://rukminim1.flixcart.com/image/312/312/j5ws0i80/computer/y/z/g/acer-na-notebook-original-imaewhwsbmyquxjr.jpeg?q=70",
+    "maximumDiscount": 27,
+    "processor": "Intel Core i5 Processor (8th Gen)",
+    "RAM": 4,
+    "OS": "64 bit Windows 10 Operating System",
+    "storage": 128,
+    "displaySize": 15.6,
+    "adminId": "test1@admin.com"
+}

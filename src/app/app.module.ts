@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './@auth/auth.module';
 import { BuyProductComponent } from './user/buy-product.component';
 import { CoreModule } from './@core/core.module';
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 
 @NgModule({
     declarations: [AppComponent, BuyProductComponent],
@@ -18,7 +19,8 @@ import { CoreModule } from './@core/core.module';
         AppRoutingModule,
         MaterialModule,
         AuthModule,
-        CoreModule.forRoot()
+        CoreModule.forRoot(),
+        Ng2GoogleChartsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

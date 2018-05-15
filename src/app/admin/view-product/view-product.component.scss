@@ -1,0 +1,21 @@
+:host /deep/ ng2-smart-table {
+    font-size: 20px;
+    font-weight: bold;
+}
+:host /deep/ ng2-smart-table thead > tr > th  {
+    background-color:#c0cce4;
+    color:black;
+}
+:host /deep/ td.ng2-smart-actions a {cursor: pointer;color: white; font-size: 2rem;padding-left: 1.5em;}
+:host /deep/ th.ng2-smart-actions-title a {cursor: pointer;color: darkblue; font-size: 2rem;}
+:host /deep/ ng2-smart-table-title a:focus { color: #21304f; }
+:host /deep/ ng2-smart-table-title a { color:black; }
+
+:host /deep/ table table-bordered {
+    width: 500px;
+}
+:host /deep/ ng2-smart-table tr:hover, td.ng2-smart-actions a{
+    background-color: #142344;
+    color: white;
+  }
+

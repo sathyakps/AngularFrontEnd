@@ -13,6 +13,12 @@ import { ViewProfileComponent } from './view-profile/view-profile.component';
 import { GenerateReferalComponent } from './generate-Referal/generate-Referal.component';
 import { ReferFriendComponent } from './refer-friend/refer-friend.component';
 import { ShareButtonsModule } from 'ngx-sharebuttons';
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import { UserAnalyticsComponent } from './analytics/analytics.component';
+import { OrgChartModule } from 'ng-org-chart';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SliderModule } from 'ngx-slider';
+
 @NgModule({
     declarations: [
         ViewProfileComponent,
@@ -21,7 +27,8 @@ import { ShareButtonsModule } from 'ngx-sharebuttons';
         ViewProductComponent,
         ViewProductDetailComponent,
         GenerateReferalComponent,
-        ReferFriendComponent
+        ReferFriendComponent,
+        UserAnalyticsComponent
     ],
     imports: [
         ShareButtonsModule.forRoot(),
@@ -29,7 +36,11 @@ import { ShareButtonsModule } from 'ngx-sharebuttons';
         CommonModule,
         MarketingRoutingModule,
         SharedModule,
-        NgbModule.forRoot()
+        Ng2GoogleChartsModule,
+        NgbModule.forRoot(),
+        OrgChartModule,
+        ReactiveFormsModule,
+        SliderModule
     ],
     exports: [],
     providers: [],

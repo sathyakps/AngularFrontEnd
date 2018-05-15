@@ -74,4 +74,12 @@ export class UserService {
     getProfile(email) {
         return this.http.get(BASR_URL + 'user/profile/' + email);
     }
+
+    generateProductCoupon(detail, email) {
+        return this.http.post(BASR_URL + 'referral/code/' + email, detail);
+    }
+
+    getUserData(email) {
+        return this.http.get(BASR_URL + 'data/user/' + email);
+    }
 }
