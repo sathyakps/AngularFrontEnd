@@ -1,21 +1,11 @@
 <div class="row">
     <div class="text-center col-md-12">
-        Add product
+        Update product
     </div>
 </div>
 
-<div class="row">
-    <div class="text-center col-md-12">
-        Product Type :
-        <mat-radio-group [(ngModel)]="type">
-            <mat-radio-button style="padding:10px;" value="LAPTOP">LAPTOP</mat-radio-button>
-            <mat-radio-button style="padding:10px;" value="TV">TV</mat-radio-button>
-            <mat-radio-button style="padding:10px;" value="MOBILE"> MOBILE</mat-radio-button>
-        </mat-radio-group>
-    </div>
-</div>
 
-<div *ngIf="type==='LAPTOP'" class="row">
+<div *ngIf="data['product']['categoryName']==='LAPTOP'" class="row">
     <form [formGroup]="laptopForm" class="col-md-12">
         <div class="col-md-6">
             <mat-form-field>
@@ -77,12 +67,12 @@
     </form>
     <div class="row">
         <div class="col-md-12 text-center">
-            <button (click)="addLaptop()" [disabled]="laptopForm.invalid" style="margin-left: 200px;" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 mat-button">Add Laptop</button>
+            <button (click)="updateLaptop()" [disabled]="laptopForm.invalid" style="margin-left: 200px;" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 mat-button">Update Laptop</button>
         </div>
     </div>
 </div>
 
-<div *ngIf="type==='TV'" class="row">
+<div *ngIf="data['product']['categoryName']==='TV'" class="row">
     <form [formGroup]="tvForm" class="col-md-12">
         <div class="col-md-6">
             <mat-form-field>
@@ -141,12 +131,12 @@
     </form>
     <div class="row">
         <div class="col-md-12 text-center">
-            <button (click)="addTV()"  [disabled]="tvForm.invalid"  style="margin-left: 200px;" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 mat-button">Add TV</button>
+            <button (click)="updateTV()" [disabled]="tvForm.invalid" style="margin-left: 200px;" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 mat-button">Update TV</button>
         </div>
     </div>
 </div>
 
-<div *ngIf="type==='MOBILE'" class="row">
+<div *ngIf="data['product']['categoryName']==='MOBILE'" class="row">
     <form [formGroup]="mobileForm" class="col-md-12">
         <div class="col-md-6">
             <mat-form-field>
@@ -210,7 +200,7 @@
     </form>
     <div class="row">
         <div class="col-md-12 text-center">
-            <button (click)="addMobile()"  [disabled]="mobileForm.invalid"  style="margin-left: 200px;" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 mat-button">Add Mobile</button>
+            <button (click)="updateMobile()" [disabled]="mobileForm.invalid" style="margin-left: 200px;" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 mat-button">Update Mobile</button>
         </div>
     </div>
 </div>

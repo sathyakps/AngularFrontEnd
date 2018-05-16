@@ -19,7 +19,8 @@ export class ViewProductDetailComponent implements OnInit {
         @Inject(MAT_DIALOG_DATA) public data: any,
         private modal: MatDialog,
         public userService: UserService,
-        public dataservice: DataService
+        public dataservice: DataService,
+        private snack: MatSnackBar
     ) {
         this.dataservice.loggedInUser.subscribe(dataa => {
             if (dataa) {
@@ -44,14 +45,17 @@ export class ViewProductDetailComponent implements OnInit {
     }
 
     generateReferral(): void {
+        console.log(this.discountForm.value)
         this.userService.generateProductCoupon(this.discountForm.value, this.userData['email']).subscribe(data => {
             this.dialogRef.close();
-            if (data['success']) {
+            if (data['success'] && data['data']) {
                 this.modal.open(GenerateReferalComponent, {
                     width: '600px',
                     height: '430px',
                     data: data['data']
                 });
+            } else {
+                this.snack.open('Failed To create Coupon.' , 'Try Again', {duration : 5000})
             }
         });
     }

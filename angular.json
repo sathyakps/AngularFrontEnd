@@ -42,7 +42,8 @@
                             "src/assets/vendor/perfect-scrollbar/perfect-scrollbar.css",
                             "src/assets/vendor/slick/slick.css",
                             "src/assets/vendor/slick/slick-theme.css",
-                            "./node_modules/ng-org-chart/styles.css"
+                            "./node_modules/ng-org-chart/styles.css",
+                            "./node_modules/bootstrap/dist/css/bootstrap.min.css"
                         ],
                         "scripts": [
                             "src/assets/vendor/jquery/jquery-3.2.1.min.js",
@@ -66,7 +67,7 @@
                             "src/assets/vendor/jqueryui/external/jquery/jquery.js",
                             "src/assets/vendor/jqueryui/jquery-ui.js",
                             "src/assets/vendor/select2/select2.js",
-                            "src/assets/js/ism-2.2.min.js"
+                            "./node_modules/bootstrap/dist/js/bootstrap.min.js"
                         ]
                     },
                     "configurations": {

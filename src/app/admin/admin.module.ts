@@ -11,12 +11,33 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { ConfirmationDialogComponent } from 'src/app/admin/confirmation-dialog/confirmation-dialog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminAnalyticsComponent } from './admin-analytics/admin-analytics.component';
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import { EditProductComponent } from './edit-product/edit-product.component';
 
 @NgModule({
-    declarations: [AdminComponent, DashboardComponentComponent, AddProductComponent, ViewProductComponent, ConfirmationDialogComponent],
-    imports: [AdminRoutingModule, MaterialModule, CommonModule, SharedModule, Ng2SmartTableModule],
+    declarations: [
+        AdminAnalyticsComponent,
+        AdminComponent,
+        DashboardComponentComponent,
+        AddProductComponent,
+        ViewProductComponent,
+        ConfirmationDialogComponent,
+        EditProductComponent
+    ],
+    imports: [
+        Ng2GoogleChartsModule,
+        FormsModule,
+        ReactiveFormsModule,
+        AdminRoutingModule,
+        MaterialModule,
+        CommonModule,
+        SharedModule,
+        Ng2SmartTableModule
+    ],
     exports: [],
     providers: [],
-    entryComponents: []
+    entryComponents: [AddProductComponent, ConfirmationDialogComponent, EditProductComponent]
 })
 export class AdminModule {}

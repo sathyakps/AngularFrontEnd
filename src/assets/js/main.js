@@ -4,6 +4,8 @@
 
     $(document).ready(function () {
 
+
+
         $(".log-in").click(function(){
             $(".signIn").addClass("active-dx");
             $(".signUp").addClass("inactive-sx");
@@ -17,6 +19,7 @@
             $(".signIn").removeClass("active-dx");
             $(".signUp").removeClass("inactive-sx");
         });
+
 
 
     /*[ Load page ]
@@ -357,7 +360,6 @@
     });
 
     $('.parallax100').parallax100();
-
 
 
   });

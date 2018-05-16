@@ -16,7 +16,7 @@ const routes: Routes = [
     { path: 'admin', loadChildren: './admin/admin.module#AdminModule' },
     { path: 'auth', component: LoginComponent },
     { path: 'register/:code', component: LoginComponent },
-    { path: 'buy', component: BuyProductComponent },
+    { path: 'product/buy/:code', component: BuyProductComponent },
     { path: '', redirectTo: 'auth', pathMatch: 'prefix' },
     { path: '**', redirectTo: 'auth' }
 ];

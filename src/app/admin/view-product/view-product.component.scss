@@ -19,3 +19,11 @@
     color: white;
   }
 
+ :host /deep/ ng2-smart-table > ng2-smart-table-pager > nav > ul > li > a {
+    height: 38.988636px;
+    padding-top: 10px;
+ }
+
+ :host /deep/  ng2-smart-table > ng2-smart-table-pager > nav {
+    margin-left: 500px;
+ }

@@ -1,0 +1,21 @@
+<div class="row">
+        <div style="margin-top:20px;margin-left:50px ;height:500px;outline-style: solid;
+        outline-color:darkblue;outline-width: thin;padding: 10px;
+        border-radius: 25px;" class="col-md-5">
+        <h5 style="font-size:30px;color:rgb(49, 47, 47)">Product Category</h5>
+            <div *ngIf="!pieChartReady">
+                    <div class="loader05" style="position: absolute;margin-left:300px;"></div>
+            </div>
+            <google-chart (chartReady)="makeChartPieVisible()" [data]="pieChartData "></google-chart>
+        </div>
+
+        <div style="margin-top:20px;margin-left:50px ;height:500px; outline-style: solid;
+        outline-color:darkblue;outline-width: thin;padding: 10px;
+        border-radius: 25px;" class="com-md-offset-1 col-md-5">
+        <h5 style="font-size:30px;color:rgb(49, 47, 47)">Sales and Reward</h5>
+            <div *ngIf="!barChartReady">
+                    <div class="loader05" style="position: absolute;margin-left:320px;"></div>
+            </div>
+            <google-chart (chartReady)="makeChartBarVisible()" [data]="columnChartData "></google-chart>
+        </div>
+    </div><br><br>

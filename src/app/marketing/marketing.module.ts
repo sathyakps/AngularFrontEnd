@@ -17,7 +17,6 @@ import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import { UserAnalyticsComponent } from './analytics/analytics.component';
 import { OrgChartModule } from 'ng-org-chart';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SliderModule } from 'ngx-slider';
 
 @NgModule({
     declarations: [
@@ -39,8 +38,7 @@ import { SliderModule } from 'ngx-slider';
         Ng2GoogleChartsModule,
         NgbModule.forRoot(),
         OrgChartModule,
-        ReactiveFormsModule,
-        SliderModule
+        ReactiveFormsModule
     ],
     exports: [],
     providers: [],

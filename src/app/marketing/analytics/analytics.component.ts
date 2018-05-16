@@ -36,7 +36,7 @@ export class UserAnalyticsComponent implements OnInit {
                 ['FriendLevel 2', groupBy[2] ? groupBy[2].length : 0]
             ],
             options: {
-                title: 'Referral Type',
+                // title: 'Referral Type',
                 is3D: true,
                 height: 400,
                 width: 500
@@ -114,9 +114,9 @@ export class UserAnalyticsComponent implements OnInit {
             ],
             options: {
                 height: 400,
-                width: 600,
+                width: 500,
                 chart: {
-                    title: 'Reward Points and Transactions'
+                    // title: 'Reward Points and Transactions'
                 },
                 series: {
                     0: { axis: 'Transaction Count' }, // Bind series 0 to an axis named 'distance'.
@@ -130,7 +130,8 @@ export class UserAnalyticsComponent implements OnInit {
                             label: 'apparent magnitude'
                         } // Right y-axis.
                     }
-                }
+                },
+                legend: { position: 'bottom', alignment: 'start' }
             }
         };
     }
@@ -140,11 +141,12 @@ export class UserAnalyticsComponent implements OnInit {
         topUser['name'] = this.fullUserData['name'];
         topUser['email'] = this.fullUserData['email'];
         topUser['referralCode'] = this.fullUserData['referralCode'];
-        topUser['designation'] = 'RewardPoints -' + String(topUser['rewardPoints'] ? topUser['rewardPoints'] : 0);
+        topUser['designation'] =
+            'RP -' + String(this.fullUserData['rewardPoints'] ? this.fullUserData['rewardPoints'] : 0);
         const allFriends = this.fullUserData['referralUsers'];
         allFriends.forEach(element => {
             element['subordinates'] = [];
-            element['designation'] = 'RewardPoints -' + String(element['rewardPoints'] ? element['rewardPoints'] : 0);
+            element['designation'] = 'RP -' + String(element['rewardPoints'] ? element['rewardPoints'] : 0);
         });
         const directFirends = _.groupBy(allFriends, data => {
             return data['referee'];

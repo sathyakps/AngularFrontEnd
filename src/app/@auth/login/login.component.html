@@ -1,11 +1,11 @@
 <div class="container">
     <form (ngSubmit)="signUp()" [formGroup]="registerForm" class="signUp">
         <h3>Create Your Account</h3>
-        <input formControlName="name" type="text" placeholder="Insert UserName" />
-        <input formControlName="email" type="email" placeholder="Insert eMail" autocomplete='off' />
-        <input formControlName="password" type="password" placeholder="Insert Password" />
+        <input formControlName="name" type="text" placeholder="Enter UserName"  autocomplete='off'/>
+        <input formControlName="email" type="email" placeholder="Enter eMail" autocomplete='off' />
+        <input formControlName="password" type="password" placeholder="Enter Password" autocomplete='off' />
         <input formControlName="referee" type="type" placeholder="Referral Code" />
-        <input formControlName="mobile" type="mobile" placeholder="Insert Mobile Number" />
+        <input formControlName="mobile" type="mobile" placeholder="Enter Mobile Number" autocomplete='off' />
         <button #loginButton class="form-btn sx log-in" type="button">Log In</button>
         <button class="form-btn dx" type="submit">Sign Up</button>
     </form>
@@ -14,8 +14,8 @@
             <br> Back !</h3>
         <!-- <button class="fb" type="button">Log In With Facebook</button> -->
         <!-- <p>- or -</p> -->
-        <input formControlName="email" type="text" placeholder="Insert UserName" required />
-        <input formControlName="password" type="password" placeholder="Insert Password" required />
+        <input formControlName="email" type="text" placeholder="Enter Email" required  autocomplete='off'/>
+        <input formControlName="password" type="password" placeholder="Enter Password" required  autocomplete='off'/>
         <button class="form-btn sx back" type="button">Back</button>
         <button class="form-btn dx" type="submit">Log In</button>
     </form>

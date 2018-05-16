@@ -1,0 +1,322 @@
+{
+    "timestamp": 1526452487517,
+    "success": true,
+    "message": "Success",
+    "data": [
+        {
+            "_id": "5afb2a842e8cca0d8856a78c",
+            "active": true,
+            "categoryName": "LAPTOP",
+            "name": "Acer Predator Helios",
+            "price": 61990,
+            "brand": "Acer",
+            "description":
+                "Great price for a GTX 1060 GPU,Strong performance,Relatively long battery life,two-year warranty,Easy to upgrade.",
+            "imageURL":
+                "https://rukminim1.flixcart.com/image/312/312/j5ws0i80/computer/y/z/g/acer-na-notebook-original-imaewhwsbmyquxjr.jpeg?q=70",
+            "maximumDiscount": 27,
+            "processor": "Intel Core i5 Processor (8th Gen)",
+            "RAM": 4,
+            "OS": "64 bit Windows 10 Operating System",
+            "storage": 128,
+            "displaySize": 15.6,
+            "adminId": "test1@admin.com",
+            "createdAt": "2018-05-15T18:44:20.597Z",
+            "updatedAt": "2018-05-15T18:44:20.597Z",
+            "__v": 0,
+            "transactionDetails": [
+                {
+                    "_id": "5afbd0b657d1581d38f3a438",
+                    "paymentMode": "COD",
+                    "status": "SUCCESS",
+                    "productQty": 1,
+                    "productId": "5afb2a842e8cca0d8856a78c",
+                    "referEmail": "test1@v4hackers.com",
+                    "totalAmount": 61990,
+                    "buyerDetails": {
+                        "_id": "5afbd0b657d1581d38f3a439",
+                        "name": "fasfa",
+                        "mobile": 4324324,
+                        "address": "sdasd"
+                    },
+                    "directRewardPoints": 11159,
+                    "indirectRewardPoints": 1116,
+                    "indirectRewardPoints2": 112,
+                    "createdAt": "2018-05-16T06:33:27.004Z",
+                    "updatedAt": "2018-05-16T06:33:27.004Z",
+                    "__v": 0
+                },
+                {
+                    "_id": "5afbd0f657d1581d38f3a43a",
+                    "paymentMode": "COD",
+                    "status": "SUCCESS",
+                    "productQty": 1,
+                    "productId": "5afb2a842e8cca0d8856a78c",
+                    "referEmail": "test1@v4hackers.com",
+                    "totalAmount": 61990,
+                    "buyerDetails": {
+                        "_id": "5afbd0f657d1581d38f3a43b",
+                        "name": "fsdfsf",
+                        "mobile": 3432423,
+                        "address": "4653634"
+                    },
+                    "directRewardPoints": 11159,
+                    "indirectRewardPoints": 1116,
+                    "indirectRewardPoints2": 112,
+                    "createdAt": "2018-05-16T06:34:30.941Z",
+                    "updatedAt": "2018-05-16T06:34:30.941Z",
+                    "__v": 0
+                }
+            ]
+        },
+        {
+            "_id": "5afb2af82e8cca0d8856a78d",
+            "active": true,
+            "categoryName": "LAPTOP",
+            "name": "MSI GV Series",
+            "price": 82990,
+            "brand": "MSI",
+            "description":
+                "MSI GV62 7RD is stuffed with raw power with NVIDIA GTX 1050 4GB Graphics,Intel 7th gen core i7 7700HQ processor , Cooler Boost 4 technology , Steelseries keyboard",
+            "imageURL":
+                "https://rukminim1.flixcart.com/image/312/312/ja73ki80/computer/v/v/x/msi-na-gaming-laptop-original-imaeztu7nz9e6mz9.jpeg?q=70",
+            "maximumDiscount": 30,
+            "processor": "Intel Core i7 Processor (7th Gen)",
+            "RAM": 4,
+            "OS": "64 bit Windows 10 Operating System",
+            "storage": 128,
+            "displaySize": 15.6,
+            "adminId": "test1@admin.com",
+            "createdAt": "2018-05-15T18:46:16.145Z",
+            "updatedAt": "2018-05-15T18:46:16.145Z",
+            "__v": 0,
+            "transactionDetails": []
+        },
+        {
+            "_id": "5afb2b0f2e8cca0d8856a78e",
+            "active": true,
+            "categoryName": "LAPTOP",
+            "name": "Dell 15 5000",
+            "price": 36990,
+            "brand": "Dell",
+            "description":
+                "The Dell Inspiron 15 is a multimedia device with a simple and unobtrusive design.",
+            "imageURL":
+                "https://rukminim1.flixcart.com/image/312/312/j9n3ekw0/computer/r/h/a/dell-inspiron-15-2-in-1-laptop-original-imaezauz8gubzgeg.jpeg?q=70",
+            "maximumDiscount": 9,
+            "processor": "Intel Core i3 Processor (7th Gen)",
+            "RAM": 4,
+            "OS": "Windows 10 Operating System",
+            "storage": 512,
+            "displaySize": 15.6,
+            "adminId": "test1@admin.com",
+            "createdAt": "2018-05-15T18:46:39.497Z",
+            "updatedAt": "2018-05-15T18:46:39.497Z",
+            "__v": 0,
+            "transactionDetails": []
+        },
+        {
+            "_id": "5afb2b2b2e8cca0d8856a78f",
+            "active": true,
+            "categoryName": "LAPTOP",
+            "name": "Apple MacBook Air",
+            "price": 54990,
+            "brand": "Apple",
+            "description":
+                "Apple MacBook Air now comes with much faster storage, better battery life and slightly improved performance in other areas.",
+            "imageURL":
+                "https://rukminim1.flixcart.com/image/312/312/j4irlow0/computer/j/8/c/apple-na-notebook-original-imaevdrcvuksg2zv.jpeg?q=70",
+            "maximumDiscount": 5,
+            "processor": "Intel Core i5 Processor (5th Gen)",
+            "RAM": 3,
+            "OS": "64 bit Mac OS Operating System",
+            "storage": 128,
+            "displaySize": 13.3,
+            "adminId": "test1@admin.com",
+            "createdAt": "2018-05-15T18:47:07.506Z",
+            "updatedAt": "2018-05-15T18:47:07.506Z",
+            "__v": 0,
+            "transactionDetails": []
+        },
+        {
+            "_id": "5afb2b432e8cca0d8856a790",
+            "active": true,
+            "categoryName": "TV",
+            "name": "Micromax 81cm HD Ready LED TV",
+            "price": 12499,
+            "brand": "Micromax",
+            "description":
+                "Delight your senses with the Micromax HD Ready LED TV that has CLCP technology and SRS surround sound incorporated",
+            "imageURL":
+                "https://rukminim1.flixcart.com/image/312/312/j7f2qvk0/television/5/p/8/micromax-32t8361hd-original-imaexntv64hkgssg.jpeg?q=70",
+            "maximumDiscount": 37,
+            "screenSize": 32,
+            "screenType": "LED",
+            "smartTv": false,
+            "speakerOutput": 20,
+            "adminId": "test1@admin.com",
+            "createdAt": "2018-05-15T18:47:31.633Z",
+            "updatedAt": "2018-05-15T18:47:31.633Z",
+            "__v": 0,
+            "transactionDetails": []
+        },
+        {
+            "_id": "5afb2b582e8cca0d8856a791",
+            "active": true,
+            "categoryName": "TV",
+            "name": "Thomson LED Smart TV B9",
+            "price": 13499,
+            "brand": "Thomson",
+            "description":
+                "There is always a new show to catch up on, a funny clip to watch online, or an important sports event to tune in to – do it all on this Thomson Smart TV",
+            "imageURL":
+                "https://rukminim1.flixcart.com/image/312/312/jfr57rk0/television/p/h/n/thomson-b9-32m3277-original-imaf45bckfhgpzpg.jpeg?q=70",
+            "maximumDiscount": 20,
+            "screenSize": 32,
+            "screenType": "LED",
+            "smartTv": true,
+            "speakerOutput": 20,
+            "adminId": "test1@admin.com",
+            "createdAt": "2018-05-15T18:47:52.170Z",
+            "updatedAt": "2018-05-15T18:47:52.170Z",
+            "__v": 0,
+            "transactionDetails": []
+        },
+        {
+            "_id": "5afb2b792e8cca0d8856a792",
+            "active": true,
+            "categoryName": "TV",
+            "name": "Sanyo 108.2cm Full HD LED TV",
+            "price": 22999,
+            "brand": "Sanyo",
+            "description":
+                "Enjoy watching your favourite TV shows, movies, and much more on the crystal-clear 108.2 cm (43 inch) display of the Sanyo Full HD LED TV",
+            "imageURL":
+                "https://rukminim1.flixcart.com/image/312/312/jc0ttow0-1/television/7/v/p/sanyo-xt-43s7100f-original-imaff8x4gguhghhg.jpeg?q=70",
+            "maximumDiscount": 41,
+            "screenSize": 43,
+            "screenType": "LED",
+            "smartTv": true,
+            "speakerOutput": 16,
+            "adminId": "test1@admin.com",
+            "createdAt": "2018-05-15T18:48:25.608Z",
+            "updatedAt": "2018-05-15T18:48:25.608Z",
+            "__v": 0,
+            "transactionDetails": []
+        },
+        {
+            "_id": "5afb2b912e8cca0d8856a793",
+            "active": true,
+            "categoryName": "TV",
+            "name": "Vu 80cm HD Ready LED TV",
+            "price": 11499,
+            "brand": "Vu",
+            "description":
+                "Television, just got a lot more interesting, with clear visuals and great audio as you bring home this 80 cm(32 inch) HD Ready LED TV from Vu",
+            "imageURL":
+                "https://rukminim1.flixcart.com/image/312/312/jdyuefk0/television/t/5/4/vu-32d7545-original-imaf27fyxv4y8jnc.jpeg?q=70",
+            "maximumDiscount": 28,
+            "screenSize": 32,
+            "screenType": "LED",
+            "smartTv": true,
+            "speakerOutput": 20,
+            "adminId": "test1@admin.com",
+            "createdAt": "2018-05-15T18:48:49.176Z",
+            "updatedAt": "2018-05-15T18:48:49.176Z",
+            "__v": 0,
+            "transactionDetails": []
+        },
+        {
+            "_id": "5afb2ba92e8cca0d8856a794",
+            "active": true,
+            "categoryName": "MOBILE",
+            "name": "Redmi Note 4",
+            "price": 10999,
+            "brand": "Xiaomi",
+            "description":
+                "Redmi Note 4 will provide tough competition to other smartphones in its price segment, and even some priced a little higher.",
+            "imageURL":
+                "https://cdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-4x.jpg",
+            "maximumDiscount": 15,
+            "RAM": 4,
+            "screenSize": 5.5,
+            "battery": 4100,
+            "noOfSIM": 2,
+            "memory": 128,
+            "adminId": "test1@admin.com",
+            "createdAt": "2018-05-15T18:49:13.794Z",
+            "updatedAt": "2018-05-15T18:49:13.794Z",
+            "__v": 0,
+            "transactionDetails": []
+        },
+        {
+            "_id": "5afb2bbb2e8cca0d8856a795",
+            "active": true,
+            "categoryName": "MOBILE",
+            "name": "Panasonic Eluga A4",
+            "price": 7499,
+            "brand": "Panasonic",
+            "description":
+                "Panasonic Eluga A4 graphical performance that can make games run smoothly, this phone has got a Mali-T720 MP2 GPU",
+            "imageURL":
+                "https://cdn2.gsmarena.com/vv/bigpic/panasonic-eluga-a4.jpg",
+            "maximumDiscount": 42,
+            "RAM": 3,
+            "screenSize": 5.2,
+            "battery": 5000,
+            "noOfSIM": 2,
+            "memory": 128,
+            "adminId": "test1@admin.com",
+            "createdAt": "2018-05-15T18:49:31.512Z",
+            "updatedAt": "2018-05-15T18:49:31.512Z",
+            "__v": 0,
+            "transactionDetails": []
+        },
+        {
+            "_id": "5afb2bd32e8cca0d8856a796",
+            "active": true,
+            "categoryName": "MOBILE",
+            "name": "Honor 9 Lite",
+            "price": 14999,
+            "brand": "Honor",
+            "description":
+                "Honor 9 Lite’s bezel-light design and twin-lens camera tricks are eye catching",
+            "imageURL":
+                "https://cdn2.gsmarena.com/vv/bigpic/huawei-honor-9-lite.jpg",
+            "maximumDiscount": 11,
+            "RAM": 4,
+            "screenSize": 5.5,
+            "battery": 4000,
+            "noOfSIM": 2,
+            "memory": 128,
+            "adminId": "test1@admin.com",
+            "createdAt": "2018-05-15T18:49:55.978Z",
+            "updatedAt": "2018-05-15T18:49:55.978Z",
+            "__v": 0,
+            "transactionDetails": []
+        },
+        {
+            "_id": "5afb2be52e8cca0d8856a797",
+            "active": true,
+            "categoryName": "MOBILE",
+            "name": "Samsung Galaxy J7 Nxt",
+            "price": 9490,
+            "brand": "Samsung",
+            "description":
+                "Samsung J7 Nxt does come with a Super AMOLED display, it is just an HD panel",
+            "imageURL":
+                "https://cdn2.gsmarena.com/vv/bigpic/samsung-galaxy-j7-nxt-sm-j701fds.jpg",
+            "maximumDiscount": 13,
+            "RAM": 2,
+            "screenSize": 5.5,
+            "battery": 3000,
+            "noOfSIM": 2,
+            "memory": 256,
+            "adminId": "test1@admin.com",
+            "createdAt": "2018-05-15T18:50:13.206Z",
+            "updatedAt": "2018-05-15T18:50:13.206Z",
+            "__v": 0,
+            "transactionDetails": []
+        }
+    ]
+}

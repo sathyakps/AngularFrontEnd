@@ -9,7 +9,8 @@ import { AuthModule } from './@auth/auth.module';
 import { BuyProductComponent } from './user/buy-product.component';
 import { CoreModule } from './@core/core.module';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 @NgModule({
     declarations: [AppComponent, BuyProductComponent],
     imports: [
@@ -19,8 +20,10 @@ import { Ng2GoogleChartsModule } from 'ng2-google-charts';
         AppRoutingModule,
         MaterialModule,
         AuthModule,
+        ReactiveFormsModule,
         CoreModule.forRoot(),
-        Ng2GoogleChartsModule
+        Ng2GoogleChartsModule,
+        LoadingBarRouterModule
     ],
     providers: [],
     bootstrap: [AppComponent]

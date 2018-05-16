@@ -60,4 +60,14 @@ export class ViewProfileComponent implements OnInit {
             data: this.userData
         });
     }
+
+    logout() {
+
+        this.dialogRef.close();
+        this.userService.logout();
+        setTimeout(() => {
+            location.reload()
+        }, 500);
+
+    }
 }

@@ -82,4 +82,16 @@ export class UserService {
     getUserData(email) {
         return this.http.get(BASR_URL + 'data/user/' + email);
     }
+
+    getCouponDetails(coupon){
+        return this.http.get(BASR_URL + 'referral/' + coupon );
+    }
+
+    getProducts() {
+        return this.http.get(BASR_URL + 'admin/products');
+    }
+
+    makeTransaction(data, REFER_CODE) {
+        return this.http.post(BASR_URL + 'transactions/buy/' + REFER_CODE , data)
+    }
 }

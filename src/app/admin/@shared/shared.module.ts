@@ -4,13 +4,14 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SHARED_COMPONENTS } from './components/components';
+import { RouterModule } from '@angular/router';
 
 /**
  * Shared module that you can import everywhere, because it haven't providers.
  * It contains navbar, page-header and so on.
  */
 @NgModule({
-    imports: [CommonModule, ReactiveFormsModule, FormsModule],
+    imports: [CommonModule, ReactiveFormsModule, FormsModule, RouterModule],
     exports: [PIPES, SHARED_COMPONENTS],
     declarations: [PIPES, SHARED_COMPONENTS],
     entryComponents: [],
