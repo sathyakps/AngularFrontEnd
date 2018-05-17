@@ -1,10 +1,11 @@
 :host /deep/ ng2-smart-table {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
 }
 :host /deep/ ng2-smart-table thead > tr > th  {
     background-color:#c0cce4;
     color:black;
+    text-align: center;
 }
 :host /deep/ td.ng2-smart-actions a {cursor: pointer;color: white; font-size: 2rem;padding-left: 1.5em;}
 :host /deep/ th.ng2-smart-actions-title a {cursor: pointer;color: darkblue; font-size: 2rem;}

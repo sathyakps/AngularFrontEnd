@@ -35,6 +35,9 @@ export class UserService {
         this.matbar.open('You have been Logged Out !', 'OK', {
             duration: 5000
         });
+        setTimeout(() => {
+            location.reload();
+        }, 275);
     }
 
     setCurrentUser(data) {
@@ -83,8 +86,8 @@ export class UserService {
         return this.http.get(BASR_URL + 'data/user/' + email);
     }
 
-    getCouponDetails(coupon){
-        return this.http.get(BASR_URL + 'referral/' + coupon );
+    getCouponDetails(coupon) {
+        return this.http.get(BASR_URL + 'referral/' + coupon);
     }
 
     getProducts() {
@@ -92,6 +95,6 @@ export class UserService {
     }
 
     makeTransaction(data, REFER_CODE) {
-        return this.http.post(BASR_URL + 'transactions/buy/' + REFER_CODE , data)
+        return this.http.post(BASR_URL + 'transactions/buy/' + REFER_CODE, data);
     }
 }

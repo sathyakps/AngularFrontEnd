@@ -68,7 +68,8 @@ export class AdminAnalyticsComponent implements OnInit {
     }
 
     loadBarChart() {
-        this.groupBy['LAPTOP'].forEach(product => {
+        const laptop = this.groupBy['LAPTOP'] ? this.groupBy['LAPTOP'] : [];
+        laptop.forEach(product => {
 
             this.lapToprewards += _.sumBy(product['transactionDetails'], (data) => {
                 return data['directRewardPoints'] + data['indirectRewardPoints'] + data['indirectRewardPoints2'];
@@ -78,7 +79,9 @@ export class AdminAnalyticsComponent implements OnInit {
             });
         });
 
-        this.groupBy['MOBILE'].forEach(product => {
+        const mobile = this.groupBy['MOBILE'] ? this.groupBy['MOBILE'] : [];
+
+        mobile.forEach(product => {
 
             this.mobilerewards += _.sumBy(product['transactionDetails'], (data) => {
                 return data['directRewardPoints'] + data['indirectRewardPoints'] + data['indirectRewardPoints2'];
@@ -88,7 +91,8 @@ export class AdminAnalyticsComponent implements OnInit {
             });
         });
 
-        this.groupBy['TV'].forEach(product => {
+        const TV = this.groupBy['TV'] ? this.groupBy['TV'] : [];
+        TV.forEach(product => {
 
             this.tvrewards += _.sumBy(product['transactionDetails'], (data) => {
                 return data['directRewardPoints'] + data['indirectRewardPoints'] + data['indirectRewardPoints2'];

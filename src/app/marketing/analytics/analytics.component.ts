@@ -113,6 +113,7 @@ export class UserAnalyticsComponent implements OnInit {
                 ['Friend Level 2', indirectTransactions2.length ? indirectTransactions2.length : 0, indirectRewards2]
             ],
             options: {
+
                 height: 400,
                 width: 500,
                 chart: {

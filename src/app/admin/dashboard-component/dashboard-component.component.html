@@ -1,3 +1,77 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../../../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+
+    <!-- Wrapper for slides -->
+    <div>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="{{sliders[0].imagePath}}" class="img-responsive" alt="Summer 2018" style="width:100%;">
+                <div class="carousel-caption bounce">
+                    <h1 style="color:aqua;">Big Shopping Days</h1>
+
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="{{sliders[1].imagePath}}" class="img-responsive" alt="Best Buy" style="width:100%;">
+                <div class="carousel-caption bounce" style="color:darkblue;">
+                    <h1>Best Buy</h1>
+                    <br>
+                    <br>
+                    <h3>Upto 70% Offer</h3>
+
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="{{sliders[2].imagePath}}" class="img-responsive" alt="carousel-caption" style="width:100%;">
+                <div class="carousel-caption bounce">
+                    <h1 style="color:white;">Block Bluster Sales</h1>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{sliders[3].imagePath}}" class="img-responsive" alt="carousel-caption" style="width:100%;">
+                <div class="carousel-caption bounce">
+                    <h1 style="color:red;">Grab the Top Offers</h1>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <br>
+</div>
+
+                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5">
+                    Laptop
+                </button>
+
+                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5">
+                    Mobile
+                </button>
+                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5">
+                    TV
+                </button>
+
+
+
 <div class="sec-banner bg0">
     <div class="flex-w flex-c-m">
         <div class="size-202 m-lr-auto respon4">
@@ -5,7 +79,7 @@
             <div class="block1 wrap-pic-w">
                 <img src="../../../assets/images/banner-04.jpg" alt="IMG-BANNER">
 
-                <a href="product.html" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+                <a routerLink= "/admin/dashboard" routerLinkActive="active-menu" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                     <div class="block1-txt-child1 flex-col-l">
                         <span class="block1-name ltext-102 trans-04 p-b-8">
                             Laptops
@@ -30,7 +104,7 @@
             <div class="block1 wrap-pic-w">
                 <img src="../../../assets/images/banner-05.jpg" alt="IMG-BANNER">
 
-                <a href="product.html" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+                <a routerLink= "/admin/dashboard" routerLinkActive="active-menu" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                     <div class="block1-txt-child1 flex-col-l">
                         <span class="block1-name ltext-102 trans-04 p-b-8">
                             LED TVs
@@ -50,12 +124,12 @@
             </div>
         </div>
 
-        <div class="size-202 m-lr-auto respon4">
+        <div class="size-150 m-lr-auto respon4">
             <!-- Block1 -->
             <div class="block1 wrap-pic-w">
                 <img src="../../../assets/images/banner-06.jpg" alt="IMG-BANNER">
 
-                <a href="product.html" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+                <a routerLink= "/admin/dashboard"  routerLinkActive="active-menu" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                     <div class="block1-txt-child1 flex-col-l">
                         <span class="block1-name ltext-102 trans-04 p-b-8">
                             Mobiles
@@ -75,4 +149,5 @@
             </div>
         </div>
     </div>
+
 </div>
