@@ -11,7 +11,7 @@
         Refer Product and Earn Rewards
     </div>
     <div class="swal-text">
-        <span>{{ 'http://localhost:3000/product/buy/' + data['referCode']}}</span>
+        <span>{{ referURL +'product/buy/' + data['referCode']}}</span>
         <share-buttons [theme]="'circles-dark'" [include]="[ 'twitter','google','linkedin','whatsapp','email', 'facebook']" [show]="6"
             [url]="'http://localhost:3000/product/buy/'+ data['referCode']"></share-buttons>
     </div>

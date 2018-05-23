@@ -30,6 +30,8 @@ export class BuyProductComponent implements OnInit {
     getCodeDetails() {
         this.userService.getCouponDetails(this.referCode).subscribe(data => {
             if (data['success']) {
+
+                console.log(data);
                 this.userData = data['data']['email'];
                 this.referCodeDetails = _.find(data['data']['productCodes'], {
                     referCode: this.referCode
@@ -81,6 +83,9 @@ export class BuyProductComponent implements OnInit {
             if (data['success']) {
                 this.snackBar.open('Transaction Successfull', 'ok', { duration: 5000 });
                 this.router.navigate(['/auth']);
+                setTimeout(() => {
+                    location.reload();
+                }, 300);
             } else {
                 this.snackBar.open('Transaction Unsuccessfull', 'ok', { duration: 5000 });
             }

@@ -11,7 +11,7 @@
         Refer Friend
     </div>
     <div class="swal-text">
-        <span>{{ 'http://localhost:3000/register/' + data['referralCode']}}</span>
+        <span>{{ referURL + 'register/' + data['referralCode']}}</span>
         <share-buttons [theme]="'circles-dark'" [include]="[ 'twitter','google','linkedin','whatsapp','email', 'facebook']" [show]="6"
             [url]="'http://localhost:3000/register/'+ data['referralCode']"></share-buttons>
     </div>

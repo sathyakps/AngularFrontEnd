@@ -1,126 +1,231 @@
-<div  *ngIf="data">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-7 p-b-30">
-                    <div class="p-l-25 p-r-30 p-lr-0-lg">
-                        <div class="wrap-slick3 flex-sb flex-w">
-                            <div class="slick3 gallery-lb">
-                                <div class="item-slick3">
-                                    <div class="wrap-pic-w pos-relative">
-                                        <img [src]="data['imageURL']" alt="IMG-PRODUCT">
-                                    </div>
+<div *ngIf="data">
+    <div class="container">
+        <div class="row" style="border: 2px solid black;">
+            <div class="col-md-6 col-lg-7 p-b-30">
+                <div class="p-l-25 p-r-30 p-lr-0-lg">
+                    <div class="wrap-slick3 flex-sb flex-w">
+                        <div class="slick3 gallery-lb">
+                            <div class="item-slick3">
+                                <div class="wrap-pic-w pos-relative zoom">
+                                    <img [src]="data['imageURL']" alt="IMG-PRODUCT">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="p-t-33">
-                        <div class="flex-w flex-r-m p-b-10">
-                            <div class="size-204 flex-w flex-m respon6-next">
-                                OurPrice: {{data['price'] * ((100 - referCodeDetails['discount'])/100)}}
-                            </div>
-                        </div>
-                        <div [formGroup]="transactionForm">
-                                <mat-form-field style="margin: 10px" >
-                                        <input formControlName="productQty" type="number" matInput placeholder="Quantity" min="1">
-                                </mat-form-field>
-                                <span formGroupName="buyerDetails">
-                                        <mat-form-field style="margin: 10px" class="example-full-width">
-                                                <input formControlName="name" type="text" matInput placeholder="Name" min="1">
-                                        </mat-form-field>
-                                        <br>
-                                        <mat-form-field style="margin: 10px" class="example-full-width">
-                                                <input formControlName="mobile" type="number" matInput placeholder="Mobile" min="1">
-                                        </mat-form-field>
+                </div>
+                <div class="p-t-33">
+                    <div class="flex-w flex-r-m p-b-10" style="margin-right:220px;margin-top: 30px;">
+                            <span style="color:black;font-size: 20px;font-weight: bold">
+                                    Our Price :
+                                </span>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span style="color:mediumslateblue;font-size: 30px;">
+                                    &#8377;
+                                </span>
+                            <span class="mtext-106 cl2" >
+                                    {{data['price'] * ((100 - referCodeDetails['discount'])/100)}}
+                            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color:mediumslateblue;font-size: 30px;">
+                                    &#8377;
+                                </span>
+                                <span class="mtext-106 cl2" style="text-decoration: line-through;text-decoration-color: red;">
+                                        {{data['price']}}
+                                </span>
+                    </div>
+                    <div [formGroup]="transactionForm">
+                        <mat-form-field style="margin: 10px">
+                            <input formControlName="productQty" type="number" matInput placeholder="Quantity" min="1">
+                        </mat-form-field>
+                        <span formGroupName="buyerDetails">
+                            <mat-form-field style="margin: 10px" class="example-full-width">
+                                <input formControlName="name" type="text" matInput placeholder="Name" min="1">
+                            </mat-form-field>
+                            <br>
+                            <mat-form-field style="margin: 10px" class="example-full-width">
+                                <input formControlName="mobile" type="number" matInput placeholder="Mobile" min="1">
+                            </mat-form-field>
 
-                                        <mat-form-field style="margin: 10px" class="example-full-width">
-                                                <input formControlName="address" type="text" matInput placeholder="Address" min="1">
-                                        </mat-form-field>
+                            <mat-form-field style="margin: 10px" class="example-full-width">
+                                <input formControlName="address" type="text" matInput placeholder="Address" min="1">
+                            </mat-form-field>
+                        </span>
+
+
+                    </div>
+                    <button style="margin-top: 20px" (click)="makeTransaction()" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+                        Buy
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-5 p-b-30">
+                <div class="p-r-50 p-t-5 p-lr-0-lg">
+                    <h4 class="mtext-105 cl2 js-name-detail p-b-14">
+                        {{data['name']}}
+                        <br>
+                    </h4><br>
+                    <h5 class="mtext-105 cl2 js-name-detail p-b-14" style="font-size: 20px;text-decoration:underline;">
+                            Specifications:
+                            <br>
+                        </h5>
+
+
+                    <ul>
+                        <li class="p-b-5 flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+
+                            <span class="mtext-106 cl2" style="color:mediumslateblue">
+                                Price :
+                            </span>
+
+                            <span class="mtext-106 cl2">
+                                Rs. {{data['price']}}
+                            </span>
+
+                        </li>
+                        <span *ngIf="data['categoryName'] === 'TV'">
+                            <li *ngIf="data['screenSize']" class="p-b-5 flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+
+                                <span class="mtext-106 cl2" style="color:mediumslateblue">
+                                    ScreenSize :
                                 </span>
 
+                                <span class="mtext-106 cl2">
+                                    {{data['screenSize']}}
+                                </span>
 
-                        </div>
-                        <button style="margin-top: 20px" (click)="makeTransaction()"  class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
-                               Buy
-                            </button>
-                    </div>
-                </div>
+                            </li>
 
-                <div class="col-md-6 col-lg-5 p-b-30">
-                    <div class="p-r-50 p-t-5 p-lr-0-lg">
-                        <h4 class="mtext-105 cl2 js-name-detail p-b-14">
-                            {{data['name']}}
-                            <br>
-                        </h4>
+                            <li *ngIf="data['screenType']" class="p-b-5 flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
 
-                        <span class="mtext-106 cl2">
-                            Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Rs.{{data['price']}}
-                            <br>
+                                <span class="mtext-106 cl2" style="color:mediumslateblue">
+                                    Screen Type :
+                                </span>
+
+                                <span class="mtext-106 cl2">
+                                    {{data['screenType']}}
+                                </span>
+                            </li>
+                            <li  *ngIf="data['smartTv']" class="p-b-5 flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+
+                                <span class="mtext-106 cl2" style="color:mediumslateblue">
+                                    Smart Tv :
+                                </span>
+
+                                <span class="mtext-106 cl2">
+                                    {{data['smartTv']}}
+                                </span>
+                            </li>
+                            <li *ngIf="data['speakerOutput']" class="p-b-5 flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+
+                                <span class="mtext-106 cl2" style="color:mediumslateblue">
+                                    Speaker output :
+                                </span>
+
+                                <span class="mtext-106 cl2">
+                                    {{data['speakerOutput']}}
+                                </span>
+                            </li>
                         </span>
 
-
-
-                        <span *ngIf="data['categoryName'] === 'TV'">
-                            <span *ngIf="data['screenSize']" class="mtext-106 cl2">
-                                ScreenSize : {{data['screenSize']}}
-                                <br>
-                            </span>
-                            <span *ngIf="data['screenType']" class="mtext-106 cl2">
-                                Screen Type : {{data['screenType']}}
-                                <br>
-                            </span>
-                            <span *ngIf="data['smartTv']" class="mtext-106 cl2">
-                                Smart Tv : {{data['smartTv']}}
-                                <br>
-                            </span>
-                            <span *ngIf="data['speakerOutput']" class="mtext-106 cl2">
-                                Speaker output : {{data['speakerOutput']}}
-                                <br>
-                            </span>
-                        </span>
 
                         <span *ngIf="data['categoryName'] === 'LAPTOP'">
-                            <span *ngIf="data['processor']" class="mtext-106 cl2">
-                                Processor : {{data['processor']}}
-                                <br>
-                            </span>
-                            <span *ngIf="data['RAM']" class="mtext-106 cl2">
-                                RAM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{data['RAM']}}
-                                <br>
-                            </span>
-                            <span *ngIf="data['OS']" class="mtext-106 cl2">
-                                OS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{data['OS']}}
-                                <br>
-                            </span>
-                            <span *ngIf="data['storage']" class="mtext-106 cl2">
-                                Storage &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{data['storage']}}
-                                <br>
-                            </span>
+                            <li  *ngIf="data['processor']" class="p-b-5 flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+
+                                <span  class="mtext-106 cl2" style="color:mediumslateblue">
+                                    Processor :
+                                </span>
+
+                                <span class="mtext-106 cl2">
+                                    {{data['processor']}}
+                                </span>
+
+                            </li>
+
+                            <li *ngIf="data['RAM']" class="p-b-5 flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+
+                                <span class="mtext-106 cl2" style="color:mediumslateblue">
+                                    RAM
+                                </span>
+
+                                <span class="mtext-106 cl2">
+                                    {{data['RAM']}}
+                                </span>
+                            </li>
+                            <li  *ngIf="data['OS']" class="p-b-5 flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+
+                                <span class="mtext-106 cl2" style="color:mediumslateblue">
+                                    OS :
+                                </span>
+
+                                <span class="mtext-106 cl2">
+                                    {{data['OS']}}
+                                </span>
+                            </li>
+                            <li *ngIf="data['storage']" class="p-b-5 flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+
+                                <span class="mtext-106 cl2" style="color:mediumslateblue">
+                                    Storage :
+                                </span>
+
+                                <span class="mtext-106 cl2">
+                                    {{data['storage']}}
+                                </span>
+                            </li>
                         </span>
+
+
 
                         <span *ngIf="data['categoryName'] === 'MOBILE'">
-                            <span *ngIf="data['screenSize']" class="mtext-106 cl2">
-                                ScreenSize : {{data['screenSize']}}
-                                <br>
-                            </span>
-                            <span *ngIf="data['RAM']" class="mtext-106 cl2">
-                                RAM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{data['RAM']}}
-                                <br>
-                            </span>
-                            <span *ngIf="data['battery']" class="mtext-106 cl2">
-                                Battery &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{data['battery']}}
-                                <br>
-                            </span>
-                            <span *ngIf="data['noOfSIM']" class="mtext-106 cl2">
-                                No of SIM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{data['noOfSIM']}}
-                                <br>
-                            </span>
-                        </span>
+                            <li  *ngIf="data['screenSize']" class="p-b-5 flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
 
-                        <p class="stext-102 cl3 p-t-23">
-                            {{data['description']}}
-                        </p>
-                    </div>
+                                <span  class="mtext-106 cl2" style="color:mediumslateblue">
+                                    ScreenSize :
+                                </span>
+
+                                <span class="mtext-106 cl2">
+                                    {{data['screenSize']}}
+                                </span>
+
+                            </li>
+
+                            <li *ngIf="data['RAM']" class="p-b-5 flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+
+                                <span class="mtext-106 cl2" style="color:mediumslateblue">
+                                    RAM
+                                </span>
+
+                                <span class="mtext-106 cl2">
+                                    {{data['RAM']}}
+                                </span>
+                            </li>
+                            <li  *ngIf="data['battery']" class="p-b-5 flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+
+                                <span class="mtext-106 cl2" style="color:mediumslateblue">
+                                    Battery :
+                                </span>
+
+                                <span class="mtext-106 cl2">
+                                    {{data['battery']}}
+                                </span>
+                            </li>
+                            <li *ngIf="data['noOfSIM']" class="p-b-5 flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
+
+                                <span class="mtext-106 cl2" style="color:mediumslateblue">
+                                    No of SIM :
+                                </span>
+
+                                <span class="mtext-106 cl2">
+                                    {{data['noOfSIM']}}
+                                </span>
+                            </li>
+                        </span>
+                    </ul><br><br><br>
+
+
+                    <p class="stext-102 cl3 p-t-23" style="color:darkblue;font-weight: 500;">
+                        {{data['description']}}
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+</div>
